@@ -73,3 +73,5 @@ def show_page() :
 
             y_preds = logreg.predict(features)
             st.write("Predicted mental state is", y_preds[0] ,".") 
+
+show_page()

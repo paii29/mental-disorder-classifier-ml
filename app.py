@@ -19,7 +19,7 @@ mhds = mhds.drop('Patient Number', axis =1)
 
 
 def show_page() :
-    st.title('Mental Disorder Prediction')
+    st.title('What is your mental state?')
     with st.form('my_form'):
         
 
@@ -36,26 +36,26 @@ def show_page() :
         logreg.fit(X_train_encoded, y_train)
         
         
-        sadness = st.selectbox('Sadness Ocurrance', occurance)
-        euphoric = st.selectbox('Euphoric Ocurrance', occurance)
-        exhausted = st.selectbox('Exhausted Ocurrance', occurance)
-        sleep_dissorder = st.selectbox('Insomania Ocurrance', occurance)
+        sadness = st.selectbox('How often do you feel sadness?', occurance)
+        euphoric = st.selectbox('How often do you feel euphoric/happy?', occurance)
+        exhausted = st.selectbox('How often do you feel exhausted?', occurance)
+        sleep_dissorder = st.selectbox('How often do you encounter insomnia?', occurance)
         #mood_swing = st.toggle('Mood Swing')
-        mood_swing = st.selectbox('Mood Swing', yes_no)
-        suicidal_thoughts = st.selectbox('Suicidal thoughts', yes_no)
-        anorxia = st.selectbox('Anorxia', yes_no)
-        authority_respect = st.selectbox('Authority Respect', yes_no)
-        try_explanation = st.selectbox('Try-Explanation', yes_no)
-        aggressive_response = st.selectbox('Aggressive Response', yes_no)
-        ignore_moveon = st.selectbox('Ignore & Move-On', yes_no)
-        nervous_breakdown = st.selectbox('Nervous Break-down', yes_no)
-        admit_mistakes = st.selectbox('Admit Mistakes', yes_no)
-        overthinking = st.selectbox('Overthinking', yes_no)
-        sexual_activity = st.slider('Sexual Activity', 0, 10, 0, 1)
+        mood_swing = st.selectbox('Do you encounter mood swing?', yes_no)
+        suicidal_thoughts = st.selectbox('Do you get suicidal thoughts?', yes_no)
+        anorxia = st.selectbox('Do you have eating disorder?', yes_no)
+        authority_respect = st.selectbox('Do you have authority or respect to others?', yes_no)
+        try_explanation = st.selectbox('Do you try and explain out of anxiety?', yes_no)
+        aggressive_response = st.selectbox('Do you have aggressive reaction?', yes_no)
+        ignore_moveon = st.selectbox('Can you easily ignore and move on?', yes_no)
+        nervous_breakdown = st.selectbox('Do you encounter nervous break-down?', yes_no)
+        admit_mistakes = st.selectbox('Do you admit mistakes?', yes_no)
+        overthinking = st.selectbox('Do you overthink?', yes_no)
+        sexual_activity = st.slider('Rate your sexual desire', 0, 10, 0, 1)
         sexual_activity = str(sexual_activity) + ' From 10'
-        concentration = st.slider('Concentration', 0, 10, 0, 1)
+        concentration = st.slider('Rate your concentration', 0, 10, 0, 1)
         concentration = str(concentration) + ' From 10'
-        optimisim = st.slider('Optimisim', 0, 10, 0, 1)
+        optimisim = st.slider('Rate your optimisim', 0, 10, 0, 1)
         optimisim = str(optimisim) + ' From 10'
 
         submitted = st.form_submit_button("Submit")

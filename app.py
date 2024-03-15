@@ -12,7 +12,7 @@ from sklearn.metrics import f1_score
 
 
 occurance = ['Usually', 'Sometimes', 'Most-Often', 'Seldom']
-yes_no = ['Yes', 'No']
+yes_no = ['No', 'Yes']
 
 mhds = pd.read_csv('Dataset-Mental-Disorders.csv')
 mhds = mhds.drop('Patient Number', axis =1)

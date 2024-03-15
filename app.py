@@ -10,12 +10,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import f1_score
 
-def load_model():
-    with open('model_saved.pkl', 'rb') as file:
-        data = pickle.load(file)
-    return data
-
-data = load_model()
 
 occurance = ['Usually', 'Sometimes', 'Most-Often', 'Seldom']
 yes_no = ['Yes', 'No']

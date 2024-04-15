@@ -67,5 +67,13 @@ def show_page() :
 
             y_preds = logreg.predict(features)
             st.write("Predicted mental state is", y_preds[0] ,".") 
+            #Normal, Depression, Bipolar Type-1, Bipolar Type-2
+            if y_preds[0] == "Depression":
+                st.write("Depression is a mood disorder characterized by persistent feelings of sadness, hopelessness, and loss of interest or pleasure in activities. It affects how you feel, think, and handle daily activities. Symptoms can vary in severity and duration but may include persistent sadness, fatigue, changes in sleep or appetite, difficulty concentrating, feelings of worthlessness or guilt, and thoughts of death or suicide. Depression can be triggered by a combination of genetic, biological, environmental, and psychological factors.")
+            elif y_preds[0] == "Bipolar Type-1":
+                st.write("Bipolar disorder type 1 is a mood disorder characterized by episodes of mania, which is an elevated or irritable mood, often accompanied by grandiosity, increased energy, decreased need for sleep, and impulsive behavior. These manic episodes alternate with periods of depression. Individuals with bipolar type 1 may experience extreme mood swings, ranging from the highs of mania to the lows of depression. The frequency and severity of episodes can vary, and some individuals may also experience mixed episodes, where symptoms of mania and depression occur simultaneously.")
+            elif y_preds[0] == "Bipolar Type-2":
+                st.write(" Bipolar disorder type 2 is characterized by episodes of hypomania rather than full-blown mania. Hypomania is a less severe form of mania, marked by a distinct period of elevated or irritable mood, increased energy, and other symptoms similar to mania but to a lesser degree. Individuals with bipolar type 2 also experience depressive episodes, which can be severe and debilitating. The cycling between hypomania and depression can significantly impact daily functioning and quality of life.")
+            
 
 show_page()
